@@ -13,5 +13,6 @@ export default function arrayToList(array) {
     throw new Error('Creating list from empty array');
   }
 
-  throw new Error('Please delete this line and implement the function');
+  const arr = array.reduceRight((next, value) => ({ value, next }), null);
+  return arr;
 }

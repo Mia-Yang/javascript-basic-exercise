@@ -5,6 +5,11 @@ export default function countCharacter(string, prediction) {
   //
   // * Please implement this function and pass all the tests in character_counter_spec.js.
   // * Please do NOT modify the signature of the function.
-
-  throw new Error('Please delete this line and implement the function');
+  //var reg = new RegExp(prediction, 'g');
+  //var result = string.match(reg);
+  if (string === undefined || string == null || string.length === 0) {
+    return 0;
+  }
+  var count = prediction === null ? string.length:result.length;
+  return count;
 }

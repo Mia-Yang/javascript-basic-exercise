@@ -6,8 +6,16 @@ export function range(start, end) {
   //
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
-
-  throw new Error('Please delete this line and implement the function');
+  const myArray = [];
+  if (start <= end) {
+    for (let i = start; i < end; i += 1) {
+      myArray.push(i);
+    }
+  }
+  for (let i = start; i > end; i -= 1) {
+    myArray.push(i);
+  }
+  return myArray;
 }
 
 export function sum(...numbers) {
@@ -17,6 +25,6 @@ export function sum(...numbers) {
   //
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
-
-  throw new Error('Please delete this line and implement the function');
+  const result = numbers.reduce((x, y) => x + y, 0);
+  return result;
 }

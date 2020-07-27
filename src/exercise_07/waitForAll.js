@@ -9,7 +9,7 @@ export default function waitForAll(...promises) {
   // * Please implement this function and pass all the tests in wait_for_all_spec.js.
   // * Please do NOT modify the signature of the function.
   for (let i = 0; i < promises.length; i += 1) {
-    if (promises[i] instanceof Promise) {
+    if (!(promises[i] instanceof Promise)) {
       throw new Error('Not all elements are promises.');
     }
   }
